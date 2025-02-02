@@ -6,28 +6,28 @@
 /*   By: abamksa <abamksa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 09:37:04 by abamksa           #+#    #+#             */
-/*   Updated: 2025/02/02 11:26:11 by abamksa          ###   ########.fr       */
+/*   Updated: 2025/02/02 11:33:29 by abamksa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
-#include "DiomandTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main( void )
 {
-	DiomandTrap frog( "nki" );
-	FragTrap frog2( "nta" );
+	DiamondTrap dia("Amka");
+	DiamondTrap dia2("Abdelghani");
 
-	frog.attack( "the air" );
-	frog.takeDamage( 10 );
-	frog.beRepaired( 10 );
-	frog.highFivesGuys();
+	dia.attack("Aourir");
+	dia.takeDamage( 10 );
+	dia.beRepaired( 10 );
+	dia.whoAmI();
 
-	frog2.attack( "the sky" );
-	frog2.takeDamage( 10 );
-	frog2.beRepaired( 10 );
-	frog2.highFivesGuys();
+	dia2.attack("Aoulouz");
+	dia2.takeDamage( 10 );
+	dia2.beRepaired( 10 );
+	dia2.whoAmI();
 	return 0;
 }
