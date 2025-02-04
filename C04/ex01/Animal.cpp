@@ -6,7 +6,7 @@
 /*   By: abamksa <abamksa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 09:25:30 by abamksa           #+#    #+#             */
-/*   Updated: 2025/02/04 11:25:47 by abamksa          ###   ########.fr       */
+/*   Updated: 2025/02/04 13:03:08 by abamksa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@ Animal::Animal() : _type("Animal") {
 }
 
 Animal::Animal(std::string type) : _type(type) {
-	std::cout << "Animal paramitric constructor" << std::endl;
+	std::cout << this->_type << " constructor" << std::endl;
 }
 
 Animal::~Animal() {
-	std::cout << "Animal destructor" << std::endl;
+	std::cout << this->_type << " destructor" << std::endl;
 }
 
 Animal::Animal(const Animal &other) {
-	std::cout << "Animal copy constructor" << std::endl;
+	std::cout << this->_type << " copy constructor" << std::endl;
 	*this = other;
 }
 
@@ -40,5 +40,5 @@ std::string Animal::getType() const {
 }
 
 void Animal::makeSound() const {
-	std::cout << "Animal sound" << std::endl;
+	std::cout <<  this->_type << " sound" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: abamksa <abamksa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 09:27:02 by abamksa           #+#    #+#             */
-/*   Updated: 2025/02/04 10:28:47 by abamksa          ###   ########.fr       */
+/*   Updated: 2025/02/04 12:55:10 by abamksa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 #define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal {
+private:
+		Brain *_brain;
 public:
 	Cat();
 	Cat(std::string type);

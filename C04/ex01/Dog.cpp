@@ -6,7 +6,7 @@
 /*   By: abamksa <abamksa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 09:32:20 by abamksa           #+#    #+#             */
-/*   Updated: 2025/02/04 11:26:38 by abamksa          ###   ########.fr       */
+/*   Updated: 2025/02/04 13:01:06 by abamksa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,24 @@
 
 Dog::Dog() : Animal("Dog") {
 	std::cout << "Dog default constructor" << std::endl;
+	try {
+		_brain = new Brain();
+	} catch (std::bad_alloc &e) {
+		std::cerr << e.what() << std::endl;
+	}
 }
 
 Dog::Dog(std::string type) : Animal(type) {
-	std::cout << "Dog paramitric constructor" << std::endl;
+	std::cout << this->_type << " paramitric constructor" << std::endl;
+	try {
+		_brain = new Brain();
+	} catch (std::bad_alloc &e) {
+		std::cerr << e.what() << std::endl;
+	}
 }
 
 Dog::Dog(const Dog &other) {
-	std::cout << "Dog copy constructor" << std::endl;
+	std::cout << this->_type << " copy constructor" << std::endl;
 	*this = other;
 }
 
@@ -32,7 +42,7 @@ Dog &Dog::operator=(const Dog &other) {
 }
 
 Dog::~Dog() {
-	std::cout << "Dog destructor" << std::endl;
+	std::cout << this->_type << " destructor" << std::endl;
 }
 
 void Dog::makeSound() const{
